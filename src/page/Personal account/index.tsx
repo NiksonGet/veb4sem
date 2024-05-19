@@ -74,6 +74,7 @@ const Account = () => {
               message: "Нужно больше символов",
             },
           })}
+          placeholder="Введите ваше имя"
         />
         <input
           type="file"

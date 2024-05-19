@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, Button } from "antd";
 import type { ColumnsType } from "antd/es/table";

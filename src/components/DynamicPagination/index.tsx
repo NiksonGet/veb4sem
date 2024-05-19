@@ -50,7 +50,7 @@ const DinamicPagination: FC = () => {
     }
   }, [inView]);
   return (
-    <SectionList>
+    <SectionList data-testid="dynamic-pagination">
       <h1>List Univers</h1>
       {univer.map((univer) => (
         <CardUniversity data={univer} key={univer.name}></CardUniversity>
