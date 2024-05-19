@@ -1,13 +1,13 @@
-import MainRouter from './app/routing';
-import Navbar from './components/Navbar/index';
+import MainRouter from "./app/routing";
+import Navbar from "./components/Navbar/index";
 
 const App = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <MainRouter />
     </>
   );
-}
+};
 
 export default App;

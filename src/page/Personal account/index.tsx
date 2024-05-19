@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Page, Text, View, Document, StyleSheet, PDFDownloadLink, Image} from "@react-pdf/renderer";
-import {useForm } from "react-hook-form";
+import { Page, Text, View, Document, StyleSheet, PDFDownloadLink, Image } from "@react-pdf/renderer";
+import { useForm } from "react-hook-form";
 import styled from "styled-components";
 
 const FormStyle = styled.form`
@@ -55,10 +55,7 @@ const styles = StyleSheet.create({
 const Account = () => {
   const [task, setTasks] = useState<IMyForm>();
 
-  const {
-    register,
-    handleSubmit,
-  } = useForm<IMyForm>({
+  const { register, handleSubmit } = useForm<IMyForm>({
     mode: "onBlur",
   });
 
@@ -90,7 +87,7 @@ const Account = () => {
 
       {!!task?.name && (
         <PDFDownloadLink document={<MyDocument name={task.name} picture={task.picture[0]} />} fileName="lab_pdf.pdf">
-          {({loading}) => (loading ? "Loading document..." : "Download now!")}
+          {({ loading }) => (loading ? "Loading document..." : "Download now!")}
         </PDFDownloadLink>
       )}
     </>
